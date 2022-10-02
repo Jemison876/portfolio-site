@@ -1,10 +1,14 @@
 {
-  "name": "scripts",
-  "main":"server.js",
-  "version": "0.0.0",
+  "name": "tarique-jemison-portfolio-site-assignment1",
+  "main": "server.js",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^15.00.0",
+    "npm": "^8.00.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
@@ -17,5 +21,21 @@
     "jquery": "^3.6.1",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
-  }
+  },
+  "description": "Personal website which showcase my skills",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jemison876/portfolio-site.git"
+  },
+  "keywords": [
+    "Tarique",
+    "Jemison"
+  ],
+  "author": "Tarique Jemison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jemison876/portfolio-site/issues"
+  },
+  "homepage": "https://github.com/Jemison876/portfolio-site#readme"
 }
