@@ -2,12 +2,23 @@
 <%- include ('partials/main_nav.ejs') %>
 
   <!--Main Content-->
-  <main class="container">   
-    <div class="jumbotron jumbotron-fluid">      
-        <h1 class="display-4">Welcome to the <%= title %> page</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>      
-    </div>
-  </main>
+  <div id="content-wrapper">
+
+    <!--HOME-->
+    <section id="home" class="full-height px-lg-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="display-4 fw-bold">I'M A <span class="text-brand">GRAPHIC DESIGNER</span>  FROM TORONTO, CA</h1>
+            <p>I am Tarique Jemison, I create beautiful websites and wonderful graphic designs tailored to each customer needs</p>
+            <button type="button" class="btn btn-outline-secondary"><a href="/about">About Me</a></button>
+            <a href="/home" class="link-custom">View My CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
 
 <%- include ('partials/bottom_nav.ejs') %> 
 <%- include ('partials/footer.ejs') %>
