@@ -1,4 +1,10 @@
-/*custom css goes here*/
+/*app.css
+Tarique Jemison
+301266592
+October 1, 2022
+*/
+
+
 *{
     margin: 0;
     padding: 0;
@@ -48,8 +54,6 @@ img {
 .shadow-effect:hover{
     box-shadow:-6px 6px 0 0 var(--color-brand);
 }
-
-
 
 .bg-base{
     background-color: var(--color-base);
@@ -109,6 +113,7 @@ img {
     }
 }
 
+/* Buttons */
 .btn{
     padding: 12px 28px;
     font-weight: 700;

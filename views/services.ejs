@@ -1,50 +1,57 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
 
+<div id="content-wrapper">
+  <div class="container"> 
 
+    <!--SERVICES-->
+    <section id="services" class="full-height px-lg-5">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col-lg-8">
+            <h6 class="text-brand">SERVICES</h6>
+            <h1>Services That I Offer</h1>
+          </div>
+        </div>
 
-<!--SERVICES-->
-<section id="services" class="full-height px-lg-5">
-    <div class="container">
-      <div class="row pb-4">
-        <div class="col-lg-8">
-          <h6 class="text-brand">SERVICES</h6>
-          <h1>Services That I Offer</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service p-4 bg-base rounded-4 shadow-effect">
+              <div class="iconbox">
+                <i class="fa-solid fa-code"></i>
+                <h4 class="mt-4 mb-2">General Programming</h4>
+                <p>Proficient in Java, C#, Python, JavaScript, HTML etc.</p>
+                <a href="#" class="link-custom">Read More</a>
+              </div>              
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service p-4 bg-base rounded-4 shadow-effect">
+              <div class="iconbox">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h4 class="mt-4 mb-2">Web Development</h4>
+                <p>Node.js, Login authentication, Express, MongoDb, React, Angular, Vue, Docker, etc.</p>
+                <a href="#" class="link-custom">Read More</a>
+              </div>              
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service p-4 bg-base rounded-4 shadow-effect">
+              <div class="iconbox">
+                <i class="fa-solid fa-mobile"></i>
+                <h4 class="mt-4 mb-2">Mobile Computing</h4>
+                <p>Andriod Studio, Mobile Infrastructure, Mobile Security, Operating Systems, etc. </p>
+                <a href="#" class="link-custom">Read More</a>
+              </div>              
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+    <!--//SERVICES-->    
+  </div>
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="service p-4 bg-base rounded-4 shadow-effect">
-            <div class="iconbox">
-              <i class="fa-solid fa-code"></i>
-              <h4 class="mt-4 mb-2">General Programming</h4>
-              <p>Proficient in Java, C#, Python, JavaScript, HTML etc.</p>
-              <a href="#" class="link-custom">Read More</a>
-            </div>              
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="service p-4 bg-base rounded-4 shadow-effect">
-            <div class="iconbox">
-              <i class="fa-solid fa-laptop-code"></i>
-              <h4 class="mt-4 mb-2">Web Development</h4>
-              <p>Node.js, Login authentication, Express, MongoDb, React, Angular, Vue, Docker, etc.</p>
-              <a href="#" class="link-custom">Read More</a>
-            </div>              
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="service p-4 bg-base rounded-4 shadow-effect">
-            <div class="iconbox">
-              <i class="fa-solid fa-mobile"></i>
-              <h4 class="mt-4 mb-2">Mobile Computing</h4>
-              <p>Andriod Studio, Mobile Infrastructure, Mobile Security, Operating Systems, etc. </p>
-              <a href="#" class="link-custom">Read More</a>
-            </div>              
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--//SERVICES-->
+<%- include ('partials/bottom_nav.ejs') %> 
+<%- include ('partials/footer.ejs') %>
