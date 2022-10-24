@@ -1,0 +1,81 @@
+ <!--
+contact.ejs
+Tarique Jemison
+301266592
+October 1, 2022
+-->
+ 
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+
+
+<div id="content-wrapper">
+ <div class="container"> 
+
+   <!--CONTACT-->
+   <section id="contact">
+     <div class="full-height px-lg-5">
+       <div class="container">
+         <div class="row justify-content-center text-center">
+           <div class="col-lg-8 pd-4">
+             <h1 class="text-brand"><%= title %></h1>
+             <h6>Below are your current Contacts</h6>
+           </div>
+           <div class="col-lg-8">   
+
+                <% if (typeof displayName == 'string' && displayName) {%>
+                <a href="/contact-list/add" class="btn btn-primary" roll = "button">
+                    <i class="fas fa-plus-circle"></i> Add a Contact
+                </a>
+                <% } %>    
+    
+                <br><br>
+                <table class="table table-bordered">
+                    <!-- Header Row -->
+                    <tr class="">
+                        <% if (typeof displayName == 'string' && displayName) {%>
+                            <th class = "text-center text-brand col-lg-6">Contact Name</th>
+                            <th class = "text-center text-brand col-2">Contact Number</th>
+                            <th class = "text-center text-brand col-1">Contact Email</th>                                          
+                            <th class = "text-center text-brand col-1"></th>
+                            <th class = "text-center text-brand col-1"></th>
+                        <% } else { %>
+                            <th class = "text-center text-brand col-lg-6">Contact Name</th>
+                            <th class = "text-center text-brand col-lg-6">Contact Number</th>
+                            <th class = "text-center text-brand col-lg-12">Contact Email</th>
+                        <% } %>
+    
+                    </tr>
+                    <!-- Repeatable template Row -->
+                    <% for(let count = 0; count < ContactList.length; count++) { %>
+                        <tr class="">
+                            <% if (typeof displayName == 'string' && displayName) {%>
+                                <td class ="text-center col-2"><%= ContactList[count].name %></td>
+                                <td class ="text-center col-2"><%= ContactList[count].phoneNumber %></td>
+                                <td class ="text-center col-1"><%= ContactList[count].email %></td>                            
+                                <td class = "text-center col-1">
+                                    <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>Edit</a>
+                                </td>
+                                <td class = "text-center col-1">
+                                    <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i>Delete</a>
+                                </td>                            
+                            <% } else {%>
+                                <td class ="text-center col-2"><%= ContactList[count].name %></td>
+                                <td class ="text-center col-2"><%= ContactList[count].phoneNumber %></td>
+                                <td class ="text-center col-1"><%= ContactList[count].email %></td>                            
+                            <% } %>  
+                        </tr>
+                    <% } %>
+                </table>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+   <!--//CONTACT--> 
+ </div>
+
+<%- include ('partials/bottom_nav.ejs') %> 
+<%- include ('partials/footer.ejs') %>

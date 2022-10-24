@@ -1,0 +1,61 @@
+ <!--
+login.ejs
+Tarique Jemison
+301266592
+October 22, 2022
+-->
+
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/main_nav.ejs') %>
+
+
+<div id="content-wrapper">
+    <div class="container">
+
+        <section class="full-height px-lg-5">
+            <!--Message Area-->
+            <% if(messages.length > 0){ %>
+                <div class="div alert alert-danger">
+                    <%=messages %>
+                </div>
+            <% } %>  
+            <div class="row">
+                <div class="offset-md-4 col-md-4">
+                    <h1>Please Login</h1>
+                    <form method="POST" autocomplete = "off">
+                        <fieldset class="form-group text-brand">
+                            <label for="username">Username: </label>
+                            <input type="text" class="form-control"
+                            name="username" placeholder="Enter Username"
+                            id="username" required autofocus>
+                        </fieldset>
+                        <br>
+
+                        <fieldset class="form-group text-brand">
+                            <label for="password">Password: </label>
+                            <input type="password" class="form-control"
+                            name="password" placeholder="Enter Password"
+                            id="password" required>
+                            or 
+                            <a href="/register">Register Here</a>
+                        </fieldset>
+                        <br>
+
+                        <fieldset class="form-group text-right">
+                            <input type="submit" class="btn btn-success" value="Login">
+                            <a href="/">
+                                <input type="button" class="btn btn-warning" value="Cancel">
+                            </a>
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+</div>
+
+<%- include ('../partials/bottom_nav.ejs') %> 
+<%- include ('../partials/footer.ejs') %>

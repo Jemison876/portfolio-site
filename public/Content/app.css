@@ -32,6 +32,11 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 700;
 }
 
+td{
+    color:var(--color-heading);
+    font-weight: 700;
+}
+
 
 a{
     text-decoration: none;

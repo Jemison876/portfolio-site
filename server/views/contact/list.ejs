@@ -1,0 +1,83 @@
+ <!--
+list.ejs
+Tarique Jemison
+301266592
+October 22, 2022
+-->
+
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/main_nav.ejs') %>
+
+    <div id="content-wrapper">
+        <div class="container">
+         <!--Main Content-->
+        <section class="list">   
+            <div class="full-height px-lg-5">
+                <div class="container">
+                    <div class="col-lg-8 pd-4">
+
+                        <h1><%= title %></h1>
+
+                        <% if (typeof displayName == 'string' && displayName) {%>
+                        <a href="/contact-list/add" class="btn btn-primary" roll = "button">
+                            <i class="fas fa-plus-circle"></i> Add a Contact
+                        </a>
+                        <% } %>
+
+
+                        <br><br>
+                        <table class="table table-bordered bold text-brand">
+                            <!-- Header Row -->
+                            <tr class="">
+                                <% if (typeof displayName == 'string' && displayName) {%>
+                                    <th class = "text-center col-3">Contact Name</th>
+                                    <th class = "text-center col-3">Contact Number</th>
+                                    <th class = "text-center col-5">Contact Email Address</th>                                            
+                                    <th class = "text-center col-1"></th>
+                                    <th class = "text-center col-1"></th>
+                                <% } else { %>
+                                    <th class = "text-center col-3">Contact Name</th>
+                                    <th class = "text-center col-3">Contact Number</th>
+                                    <th class = "text-center col-5">Contact Email Address</th>                               
+                                    
+                                <% } %>
+
+
+                            </tr>
+                            <!-- Repeatable template Row -->
+                            <% for(let count = 0; count < ContactList.length; count++) { %>
+                                <tr class="">
+                                    <% if (typeof displayName == 'string' && displayName) {%>
+                                        <td class ="text-center col-3"><%= ContactList[count].name %></td>
+                                        <td class ="text-center col-3"><%= ContactList[count].phoneNumber %></td>
+                                        <td class ="text-center col-5"><%= ContactList[count].email %></td>                            
+                                        <td class = "text-center col-3">
+                                            <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-pencil-alt"></i>Edit</a>
+                                        </td>
+                                        <td class = "text-center col-3">
+                                            <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash-alt"></i>Delete</a>
+                                        </td>                            
+                                    <% } else {%>
+                                        <td class ="text-center col-3"><%= ContactList[count].name %></td>
+                                        <td class ="text-center col-3"><%= ContactList[count].phoneNumber %></td>
+                                        <td class ="text-center col-5"><%= ContactList[count].email %></td>
+                                        
+                                    <% } %>  
+                                </tr>
+                            <% } %>
+                        </table>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </div>
+ 
+
+<%- include ('../partials/bottom_nav.ejs') %> 
+<%- include ('../partials/footer.ejs') %>
